@@ -1,0 +1,380 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\AranockAssist.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\my_doc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About AranockAssist"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "AranockAssist Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_ARANOCKASSIST_DIALOG DIALOGEX 0, 0, 466, 234
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "AranockAssist"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Exit/Quit",IDCANCEL,7,213,33,14
+    EDITTEXT        IDC_HEALTH_CURRENT,50,15,15,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_HEALTH_BASE,70,15,15,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER
+    CTEXT           "/",IDC_STATIC,63,15,8,8
+    RTEXT           "Health:",IDC_STATIC,25,15,24,8
+    EDITTEXT        IDC_ENDURANCE_CURRENT,50,30,15,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_ENDURANCE_BASE,70,30,15,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER
+    LTEXT           "/",IDC_STATIC,66,28,8,8
+    RTEXT           "Endurance:",IDC_STATIC,10,30,38,8
+    EDITTEXT        IDC_MANA_CURRENT,50,45,15,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_MANA_BASE,70,45,15,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER
+    LTEXT           "/",IDC_STATIC,65,44,8,8
+    RTEXT           "Mana:",IDC_STATIC,25,44,21,8
+    EDITTEXT        IDC_HEALTH_MIN,255,15,15,12,ES_CENTER | ES_NUMBER | NOT 
+                    WS_BORDER
+    LTEXT           ")   {  SHIFT + F4  }",IDC_HEALTH_STATIC,270,15,59,8
+    CONTROL         "HEAL      if  (  hitpoints  <",IDC_HEALTH_AUTO,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,160,15,94,10
+    EDITTEXT        IDC_MANA_MIN,255,30,15,12,ES_CENTER | ES_NUMBER | NOT 
+                    WS_BORDER
+    LTEXT           ")   { CLICK POTION }",IDC_MANA_STATIC,270,30,68,8
+    CONTROL         "MANA    if ( manapoints <",IDC_MANA_AUTO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,160,30,96,10
+    CONTROL         "Shift + Click every",IDC_CLICK_AUTO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,163,178,73,10
+    EDITTEXT        IDC_CLICK_SECONDS,237,175,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "seconds",IDC_STATIC,267,181,28,8
+    GROUPBOX        "Auto Heal/Mana",IDC_STATIC,155,5,305,75
+    GROUPBOX        "Character Statistics",IDC_STATIC,5,5,145,75
+    GROUPBOX        "Auto Click",IDC_STATIC,155,162,147,65
+    GROUPBOX        "Auto spell",IDC_STATIC,155,85,305,75
+    CONTROL         "Protection",IDC_AUTO_PROTECTION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,175,105,48,10
+    LTEXT           "SHIFT + F6",IDC_STATIC,250,105,38,8
+    CONTROL         "Enhance weapon",IDC_AUTO_ENHANCE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,175,115,72,10
+    LTEXT           "SHIFT + F7",IDC_STATIC,250,115,38,8
+    EDITTEXT        IDC_AUTOCLICK_X,200,194,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_AUTOCLICK_Y,234,194,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           ":",IDC_STATIC,225,196,8,8
+    LTEXT           "X",IDC_STATIC,209,210,8,8
+    LTEXT           "Y",IDC_STATIC,243,210,8,8
+    CONTROL         "RECALL          if( health <",IDC_RECALL_AUTO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,160,44,96,10
+    EDITTEXT        IDC_RECALL_MIN,255,44,15,12,ES_CENTER | ES_NUMBER | NOT 
+                    WS_BORDER
+    LTEXT           ")   {  SHIFT + F5 }",IDC_STATIC,270,44,57,8
+    CONTROL         "Shift + Click every",IDC_MINE_AUTO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,320,178,73,10
+    EDITTEXT        IDC_MINE_SECONDS,394,175,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "seconds",IDC_STATIC,424,181,28,8
+    GROUPBOX        "Auto Mine",IDC_STATIC,312,162,147,65
+    EDITTEXT        IDC_AUTOMINE_X,357,194,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_AUTOMINE_Y,391,194,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           ":",IDC_STATIC,382,196,8,8
+    LTEXT           "X",IDC_STATIC,366,210,8,8
+    LTEXT           "Y",IDC_STATIC,400,210,8,8
+    PUSHBUTTON      "Check All",IDC_CHECK_ALL,45,180,50,14
+    EDITTEXT        IDC_CLICK_COUNT,268,194,24,14,ES_AUTOHSCROLL
+    CONTROL         "Bless",IDC_AUTO_BLESS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,175,125,33,10
+    LTEXT           "SHIFT + F8",IDC_STATIC,250,125,38,8
+    COMBOBOX        IDC_HEALTH_ACTION,340,15,70,30,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MANA_ACTION,340,30,70,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_RECALL_ACTION,340,45,70,30,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "AUTO SPELL",IDC_AUTO_SPELL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,159,95,60,10
+    PUSHBUTTON      "Test",IDC_TEST,15,140,50,14
+    EDITTEXT        IDC_TEST_EDITX,75,140,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_TEST_EDITY,105,140,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEST_X,75,161,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEST_Y,105,161,25,14,ES_AUTOHSCROLL
+    LTEXT           "CURRENT CURSOR POSITION:",IDC_STATIC,15,86,107,8
+    EDITTEXT        IDC_CURPOS_X,45,100,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CURPOS_Y,75,100,25,14,ES_AUTOHSCROLL
+    LTEXT           "# Times",IDC_STATIC,265,210,26,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "AranockAssist MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "AranockAssist\0"
+            VALUE "LegalCopyright", "Copyright (C) 2008\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "AranockAssist.EXE\0"
+            VALUE "ProductName", "AranockAssist Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_ARANOCKASSIST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 459
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ARANOCKASSIST_DIALOG DLGINIT
+BEGIN
+    IDC_HEALTH_ACTION, 0x403, 6, 0
+0x4c43, 0x4349, 0x004b, 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3246, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3346, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3446, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3546, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3646, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3746, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3846, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3946, "\000" 
+    IDC_HEALTH_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0030, 
+    IDC_HEALTH_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0031, 
+    IDC_HEALTH_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0032, 
+    IDC_MANA_ACTION, 0x403, 6, 0
+0x4c43, 0x4349, 0x004b, 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3246, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3346, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3446, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3546, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3646, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3746, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3846, "\000" 
+    IDC_MANA_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3946, "\000" 
+    IDC_MANA_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0030, 
+    IDC_MANA_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0031, 
+    IDC_MANA_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0032, 
+    IDC_RECALL_ACTION, 0x403, 6, 0
+0x4c43, 0x4349, 0x004b, 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3246, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3346, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3446, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3546, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3646, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3746, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3846, "\000" 
+    IDC_RECALL_ACTION, 0x403, 11, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3946, "\000" 
+    IDC_RECALL_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0030, 
+    IDC_RECALL_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0031, 
+    IDC_RECALL_ACTION, 0x403, 12, 0
+0x4853, 0x4649, 0x2054, 0x202b, 0x3146, 0x0032, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About AranockAssist..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\AranockAssist.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
